@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Install and configure firewalld on your system.
+  homepage: https://buluma.github.io/
+  topics: system, security, ansible, molecule, tox, playbook, hacktoberfest

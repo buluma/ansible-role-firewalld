@@ -1,0 +1,48 @@
+---
+- name: Update cache when needed
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 3600
+  when: ansible_os_family == 'Debian'
+
+- name: Install firewalld and requirements.
+  ansible.builtin.package:
+    name: "{{ firewalld_packages }}"
+    state: present
+
+# - name: RedHat | Install firewalld and requirements.
+#   ansible.builtin.package:
+#     name: "{{ item }}"
+#     state: present
+#   with_items:
+#     - firewalld
+#     - python-firewall
+#   when: ansible_os_family == 'RedHat'
+#
+# - name: Debian | Install firewalld and requirements.
+#   ansible.builtin.package:
+#     name: "{{ item }}"
+#     state: present
+#   with_items:
+#     - firewalld
+#     - python3-firewall
+#   when: ansible_os_family == 'Debian'
+
+# https://docs.ansible.com/ansible/latest/modules/firewalld_module.html
+- name: Configure firewalld rules
+  ansible.posix.firewalld:
+    icmp_block: "{{ item.icmp_block | default(omit) }}"
+    icmp_block_inversion: "{{ item.icmp_block_inversion | default(omit) }}"
+    immediate: "{{ item.immediate | default(omit) }}"
+    interface: "{{ item.interface | default(omit) }}"
+    masquerade: "{{ item.masquerade | default(omit) }}"
+    offline: "{{ item.offline | default(omit) }}"
+    permanent: "{{ item.permanent | default(omit) }}"
+    port: "{{ item.port | default(omit) }}"
+    rich_rule: "{{ item.rich_rule | default(omit) }}"
+    service: "{{ item.service | default(omit) }}"
+    source: "{{ item.source | default(omit) }}"
+    state: "{{ item.state }}"
+    timeout: "{{ item.timeout | default(omit) }}"
+    zone: "{{ item.zone | default(omit) }}"
+  with_items: "{{ firewalld }}"

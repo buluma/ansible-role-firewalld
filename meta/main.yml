@@ -1,0 +1,29 @@
+---
+galaxy_info:
+  role_name: firewalld
+  author: buluma
+  namespace: buluma
+  description: Install and configure firewalld on your system.
+  license: Apache-2.0
+
+  min_ansible_version: "2.5"
+
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+
+  galaxy_tags:
+    - system
+    - security
+
+dependencies: []

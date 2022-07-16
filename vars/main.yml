@@ -1,0 +1,15 @@
+---
+# vars file for ansible-role-firewalld
+
+_firewalld_packages:
+  Debian:
+    - firewalld
+    - python3-firewall
+  RedHat:
+    - firewalld
+    - python3-firewall
+  RedHat-7:
+    - firewalld
+    - python-firewall
+
+firewalld_packages: "{{ _firewalld_packages[ansible_os_family] }}"
