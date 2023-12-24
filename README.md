@@ -1,10 +1,10 @@
-# [Ansible role firewalld](#firewalld)
+# Ansible role [firewalld](https://galaxy.ansible.com/ui/standalone/roles/buluma/firewalld/documentation)
 
 Install and configure firewalld on your system.
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-firewalld/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-firewalld/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-firewalld.svg)](https://github.com/buluma/ansible-role-firewalld/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-firewalld.svg)](https://github.com/buluma/ansible-role-firewalld/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-firewalld.svg)](https://github.com/buluma/ansible-role-firewalld/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-firewalld/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-firewalld/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-firewalld.svg)](https://github.com/buluma/ansible-role-firewalld/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-firewalld.svg)](https://github.com/buluma/ansible-role-firewalld/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-firewalld.svg)](https://github.com/buluma/ansible-role-firewalld/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/firewalld)](https://galaxy.ansible.com/ui/standalone/roles/buluma/firewalld/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
